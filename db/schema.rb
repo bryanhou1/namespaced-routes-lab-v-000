@@ -20,12 +20,12 @@ ActiveRecord::Schema.define(version: 20170605034944) do
   end
 
   create_table "preferences", force: :cascade do |t|
-    t.boolean  "allow_create_artists"
-    t.boolean  "allow_create_songs"
-    t.string   "song_sort_order"
-    t.string   "artist_sort_order"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.boolean  "allow_create_artists", default: true
+    t.boolean  "allow_create_songs",   default: true
+    t.string   "song_sort_order",      default: "ASC"
+    t.string   "artist_sort_order",    default: "ASC"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
   create_table "songs", force: :cascade do |t|
