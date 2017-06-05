@@ -8,7 +8,4 @@ class Artist < ActiveRecord::Base
 			all
 		end
 	end
-
-# .order(name: Preference.first.artist_sort_order)
-# .order(title: Preference.first.song_sort_order)
 end
